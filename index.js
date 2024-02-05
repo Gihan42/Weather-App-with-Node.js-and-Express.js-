@@ -1,3 +1,8 @@
+
+//    example
+//  SEND Request IN POSTMAN 'http://localhost:3000/weather?location=city' LIKE THIS 
+
+
 import express from "express";
 import fetch from "node-fetch";
 import dotenv from "dotenv"; 
@@ -36,7 +41,7 @@ app.get('/weather', async (req, res) => {
 
     const weatherData = {
       location: data.name,
-      temperature: data.main.temp,
+      temperature: data.main.temp + "°C",
       description: data.weather[0].description,
       icon: data.weather[0].icon,
     };
