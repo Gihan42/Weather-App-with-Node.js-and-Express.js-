@@ -45,7 +45,7 @@ app.get('/weather', async (req, res) => {
       description: data.weather[0].description,
       icon: data.weather[0].icon,
     };
-
+    console.log(weatherData);
     return res.json(weatherData);
   } catch (error) {
     console.error(error);
